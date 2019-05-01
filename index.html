@@ -9,11 +9,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="bg" class="bg position">
+  <div id="bg" class="bg marginBackground position">
     <div class="centerDiv" id="mainDiv">
       <h1 class="kidDiv white">Explore the world</h1>
       <form id="js-form-1" class="kidDiv">
-        <label for ="countryName" class="azure"> Which country do you want to know? <p>Type the country code, the first two letters,</p> or a random combination of 2-3 letters! </p>
+        <label for ="countryName" class="azure"> Which country do you want to know?</br>You can start by typing a few letters!
         <input value="" placeholder="type a country name" type="text" class="inputFont" id="inputText" required>
         </label>
         <input type="submit" id="js-button" class="button" value="Go!">
@@ -23,18 +23,17 @@
     
     <div id="countryInfo" class="countryDiv hidden">
     </div>
-    <div id="calendarInfo" class="hidden">
+    <div id="calendarInfo" class="hidden greyBackground">
       <h2 class="header hidden azure" id="calendarHead"> National Holidays </h2>
     </div>
     <div id="videoInfo" class="hidden">
-      <h2 class="header azure" id="videoHead"> Find the related videos </h2>
     </div>
     <div class="wrapper">
-    <button type="submit" id="restart" class="hidden button"> Restart
+    <button type="submit" id="restart" class="hidden button"> Go back
     </button>
     </div>
       <footer>
-        <p class="footer">photo by <a href="https://unsplash.com/photos/DBYV_V5spes">Tom Ritson</a></p>
+        <p class="footer" id="footer">photo by <a href="https://unsplash.com/photos/DBYV_V5spes">Tom Ritson</a></p>
       </footer>
       <script src="index.js"></script>
    </div> 
