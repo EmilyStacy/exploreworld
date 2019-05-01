@@ -1,4 +1,4 @@
-<h1>exploreworld:My API hack project</h1>
+<h1>Exploreworld:My API hack project</h1>
 <a href= "https://emilystacy.github.io/exploreworld/" target="_blank"> Link to my Live App </a>
 <h3> This is the loading page</h3>
 <img src="images/app1.png" width="300px" height="400px" alt="loading page">
