@@ -1,10 +1,8 @@
 # exploreworld
 ##My API hack project##
 <a href= "https://emilystacy.github.io/exploreworld/"> Link to my Live App </a>
-<img src="images/app1.png" width="300px" height="200px">
-![](images/app1.png)
-<img src="images/app2.png" width="300px" height="200px">
-![](images/app2.png)
+<img src="images/app1.png" width="300px" height="400px">
+<img src="images/app2.png" width="300px" height="400px">
 
 <p> This App allows the users to
 <ul> 
