@@ -1,10 +1,11 @@
 # exploreworld
 ##My API hack project##
 <a href= "https://emilystacy.github.io/exploreworld/"> Link to my Live App </a>
-<img src="images/app1.png" width="300px">
+<img src="images/app1.png" width="300px" height="200px">
 ![](images/app1.png)
-<img src="images/app2.png" width="300">
-![](images/app1.png)
+<img src="images/app2.png" width="300px" height="200px">
+![](images/app2.png)
+
 <p> This App allows the users to
 <ul> 
   <li> type in a country name or random strings and return a country or region
