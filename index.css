@@ -31,10 +31,11 @@ position:absolute;
 }
 /*the h1*/
 .centerDiv{
-  margin-top: 40vh;
+  margin-top: 10vh;
   margin-left: 10vw;
   letter-spacing:3px;
   line-height:1.5em;
+  text-align: center;
 }
 
 .countryDiv{
@@ -48,6 +49,7 @@ position:absolute;
   margin: 0 auto;
   line-height:1.5em;
   letter-spacing:2px;
+  padding: 1%;
 }
 /*form font*/
 .inputFont {
@@ -55,9 +57,12 @@ position:absolute;
   outline: 0;
   background: whitesmoke;
   border-bottom: 1px solid white;
-  margin-top:5%;
-  display:block;
-  font:inherit;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font: inherit;
+  text-align: center;
 }
 
 input:hover,input:focus, button:onfocus {
@@ -75,7 +80,7 @@ input:hover,input:focus, button:onfocus {
 }
 
 a {
-  color:grey;
+  color:black;
 }
 a:hover{
   color:white;
@@ -83,6 +88,9 @@ a:hover{
 
 a:visited{
   color:aqua;
+}
+.blueGreen{
+  color:#a3d2d2;
 }
 
 .footer{
@@ -102,9 +110,10 @@ a:visited{
   border-radius: 8px;
   padding: 0.5em 0.6em;
   margin: 6% auto;
-  width:25%;
+  width:30%;
   text-align: center;
   font-style:inherit;
+  background-color:white;
 }
 /*country ul format*/
 .ulFormat{
@@ -116,16 +125,19 @@ a:visited{
     padding:20px;
     margin:0px;
 }
-
+/*fix color bug when restarting*/
+#countryInfo{
+background-color: #fdfbfbc7;
+}
 .liFormat{
     padding: 1px;
-    line-height: 1.5em;
-    font-size: 1.1em;
+    width:100%;
+    line-height:1.5em;
 }
-.header{
- text-align:center;
+h1{
+font-size: 4.2em;
+text-align: center;
 }
-
 .margin2{
  margin-left:35vw;
  margin-bottom:20px;
@@ -161,7 +173,7 @@ a:visited{
   justify-content: center;
 }
 #restart{
-  margin: 20px -50px; 
+  margin:20px -15%;
   position:relative;
   top:90%; 
   left:50%;
@@ -171,6 +183,8 @@ a:visited{
   padding: 0.5em 0.6em;
   width:30%;
   text-align: center;
+  background-color: #211f21;
+  color: white;
 }
 .textAlign{
   text-align:center;
@@ -182,12 +196,13 @@ margin-left:auto;
 margin-right:auto;
 /*bugargin-bottom:10vh;*/
 display:block;
-width:90%;
+width:100%;
 font-style:inherit;
 font-size:1.5em;
 line-height:1.5em;
 letter-spacing:1px;
-/*bug:margin-top: 40vh;*/
+padding:20px;
+margin-top: 40vh;
 }
 /*youtube list*/
 .ulFormat3{
@@ -195,12 +210,12 @@ letter-spacing:1px;
   padding: 0px;
   line-height: 1em;
   color: #000000e3;
-  background-color:#d2cecca8;
+  background-color:#fdfbfbe8;
   text-align:center;
 }
-
 .greyBackground{
-  background-color: #1f2021a1;
+  background-color: #0a0c0ee7;
+  padding:10px;
 }
 
 #footer2{
@@ -208,9 +223,20 @@ letter-spacing:1px;
     font-size:10px;
 }
 
+img{
+  padding: 5px;
+  max-width: 300px;
+  margin:10px;
+}
+.header{
+  text-align:center;
+}
+
 @media screen and (max-width: 1285px) and (min-width:769px) {
+  
   h1{
-  font-size:4em;
+  font-size:4.2em;
+  padding:5%;
 }
 #js-form-1{
   font-size:2em;
@@ -220,27 +246,27 @@ letter-spacing:1px;
     padding: 0px;
     line-height: 1em;
     color: #000000e3;
-    background-color: #fdfbfb94;
+    background-color: #fdfbfbe8;
     width:100%;
     text-align:center;
 }
 
 .liFormat{
-    line-height: 1.5em;
-    font-size: 1.8em;
-    width:95%
+    line-height: 2em;
+    font-size: 1.5em;
+    margin: 10px;
+    padding: 10px;
 }
 
 .h3{
   width:95%;
-  font-size:2.5em;
+  font-size:2.8em;
   line-height:1.1em;
   text-align:center;
+  padding-top:50px;
 }
 
-.blueGreen{
-  color:#a3d2d2;
-}
+
 .calendarHSize{
   font-size:2em;
 }
@@ -250,10 +276,11 @@ letter-spacing:1px;
 }
 
 .header{
- text-align:center;
- margin-top:5px;
  font-size:3em;
  padding: 5px;
+}
+.ulFormat2{
+  padding-bottom:5px;
 }
 }
 
@@ -282,36 +309,54 @@ letter-spacing:1px;
     list-style: none;
     line-height: 1em;
     color: #000000e3;
-    background-color: #d2cecca8;
+    background-color: #fdfbfbe8;
     width:100%;
     padding:5px;
     margin:0px;
     text-align:center;
 }
+.greyBackground{
+  padding:30px 0 30px 0;
+}
+
+h1{
+font-size: 3em;
+padding:5%;
+}
+
+.h3{
+  line-height:1.8em;
+}
+.liFormat{
+    line-height: 2em;
+    font-size: 1.5em;
+    margin: 10px;
+    padding: 10px;
+}
+
 }
 
 @media screen and (max-width:411px)and (min-width:323px){
-.centerDiv{
-  margin-top: 40vh;
-}
+
 .kidDiv{
   display:block;
   margin: 0px;
-  line-height:1.5em;
   letter-spacing:1.5px;
 }
 h1{
   font-size:2em;
+  padding:5%;
 }
 img{
-  max-width:300px;
-  margin-bottom:5px;
+    padding: 5px;
+    max-width: 300px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .ulFormat{
     list-style: none;
     padding: 10px;
     line-height: 1em;
-    margin: px;
     color: #00000096;
     border: 1px solid grey;
     background-color: #fdfbfbc7;
@@ -320,29 +365,45 @@ img{
     list-style: none;
     line-height: 1em;
     color: #000000e3;
-    background-color: #d2cecca8;
+    background-color: #fdfbfbe8;
     width:100%;
     padding:5px;
     margin:0px;
+}
+.greyBackground{
+  padding:5px 0 5px 0;
+}
+.header{
+ font-size:1.5em;
+ padding:15px;
+}
+.liFormat{
+  padding: 5px;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+.h3{
+  line-height:1.5em;
 }
 }
 
 @media screen and (max-width:322px){
 .centerDiv{
-  margin-top: 30vh;
   margin-left: 5vw;
 }
 .kidDiv{
   display:block;
-  line-height:1em;
   letter-spacing:0.5px;
   margin:5px;
 }
 h1{
   font-size:1.5em;
+  padding:5%;
 }
 img{
   max-width:200px;
+  padding: 5px;
+  margin: 5px;
 }
 .ulFormat2{
     list-style: none;
@@ -351,6 +412,7 @@ img{
     margin-left:0px;
     margin-right:0px;
     text-align:center;
+    padding-bottom:5px;
 }
 .ulFormat{
     list-style: none;
@@ -365,23 +427,22 @@ img{
   width:95%;
   font-size: 1em;
   line-height: 1.5em;
-  padding:15px;
+  padding:0px;
 }
 .ulFormat3{
     list-style: none;
     line-height: 1em;
     color: #000000e3;
-    background-color: #d2cecca8;
+    background-color: #fdfbfbe8;
     padding:0px;
 }
 .header{
- text-align:center;
+ font-size:0.9em;
  padding:10px;
 }
 
 .liFormat{
     padding: 1px;
-    line-height: 1.5em;
     font-size: 0.8em;
 }
 }

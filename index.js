@@ -40,7 +40,7 @@ function displayCountry(responseJson){
     $('#countryInfo').append(
     `<div id="center" class="transitionColor"> 
     <p id="footer2">photo by <a href="https://unsplash.com/@nasa">Nasa</a></p>
-   <h1 class="azure header">${responseJson[0].name} </h1>
+   <h1 class="azure">${responseJson[0].name} </h1>
   <img class="imgSize margin2 transitionColor" src='${responseJson[0].flag}' alt='flag'>
     <ul class="ulFormat">
       <li class="liFormat"><b>Capital:</b>${responseJson[0].capital?responseJson[0].capital:"N/A"} </li>
@@ -62,7 +62,7 @@ function getHolidays(countryCode){
    }
    throw new Error(response.statusText);
  })
- .then(responseJson =>displayHolidays(responseJson,maxResults=10))
+ .then(responseJson =>displayHolidays(responseJson,maxResults=9))
  .catch(err => {
     $('#calendarInfo').text('Something went wrong: The calendar API does not work now. Try again later.');
  });
@@ -70,13 +70,13 @@ function getHolidays(countryCode){
 //display holidays
 function displayHolidays(responseJson,maxResults){
  $('#calendarInfo').removeClass('hidden');
- $('#calendarHead').removeClass('hidden');
  for (let i= 0; i<responseJson.response.holidays.length & i< maxResults; i++)
  {
  $('#calendarInfo').append(
-    `<div class="azure">
+    `<div class="greyBackground">
       <ul class="ulFormat2">
-      <li class="liFormat2"><h3 class="blueGreen">${responseJson.response.holidays[i].name}</h3>
+      <li class="liFormat2"><h3 class="blueGreen h3">${responseJson.response.holidays[i].name}</h3>
+      <li class="kidDiv calendarPsize">${responseJson.response.holidays[i].type} </li>
        <li class="kidDiv calendarHSize">Year/Month/Date:${responseJson.response.holidays[i].date.iso} </li>
        <li class="kidDiv calendarPsize">${responseJson.response.holidays[i].description} </li>
       </li>
@@ -110,14 +110,15 @@ function getYouTube(countryFullCode) {
 }
 
 function displayYouTube(responseJson,maxResults){
+  console.log(responseJson);
   for (let i = 0; i < responseJson.items.length & i < maxResults; i++){
     const videoURL = responseJson.items[i].id.videoId;
     console.log(videoURL);
    $('#videoInfo').removeClass('hidden');
-   $('#videoHead').removeClass('hidden');
     $('#videoInfo').append(
       `
-      <ul class="ulFormat3 textAlign>"<li><h3 class="h3">${responseJson.items[i].snippet.title}</h3>
+      <ul class="ulFormat3 textAlign>"<li><h3 class="h3">${responseJson.items[i].snippet.title}</h6>
+      <h6>${responseJson.items[i].id.kind}</h3>
       <p class="liFormat">${responseJson.items[i].snippet.description}</p>
       <a href="https://www.youtube.com/watch?v=${videoURL}" target="_blank"> <img src='${responseJson.items[i].snippet.thumbnails.medium.url}'"></a>
       </li></ul>`
@@ -158,7 +159,7 @@ $("#restart").on("click",function restart(){
    $('#inputText').val('');
    $(".bg").css("background-image","url(https://images.unsplash.com/photo-1506111583091-becfd4bfa05d?ixlib=rb-1.2.1…cHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)");
    $('.bg').addClass('position');
-   $('html').removeClass('js-error-message');
+   $('#js-error-message').removeClass('js-error-message');
    $('html').removeClass('bgColor');
    $('#js-button').show();
 });
