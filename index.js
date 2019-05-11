@@ -1,23 +1,15 @@
-//restCountryURL
 const restCountryURL = 'https://restcountries.eu/rest/v2/name/';
-//calendaricURL and API
 const calendarURL = 'https://calendarific.com/api/v2/holidays';
-const calendarAPI = 'd59ac09ada464f0db44133ab65417cbfabcfda23';
-//youtubeURL and API
+const calendarAPI = '	eb09f2389a52b877dbf8d29f1b4efee9c95ba222';
 const youTubeAPI = 'AIzaSyC3NuguJJDNUuhGc2cYiKhsr2ZHXxFb3ic'; 
 const youtTubeURL = 'https://www.googleapis.com/youtube/v3/search';
-//restCountries API call
 function getCountry(country){
   const url = restCountryURL + country;
   fetch(url)
   .then(response => {
     if(response.ok && response.body!==null && response.body!==0){
       return response.json();
-    }/*else if(response.body==undefined){
-    $('#js-error-message').text('Something went wrong.Try other words!'); 
-    }else{
-     $('#js-error-message').text('No data.Try other words!');
-    }*/
+    }
     throw new Error(response.statusText);
   })
   .then (responseJson => displayCountry(responseJson))
@@ -28,8 +20,6 @@ function getCountry(country){
     }
   );
 }
-
-//restCountries API display
 function displayCountry(responseJson){
   $('#countryInfo').removeClass('hidden');
   $('#js-error-message').addClass('hidden');
@@ -52,7 +42,6 @@ function displayCountry(responseJson){
     </ul></div>`); 
   getYouTube(countryFullCode); 
 }
-//get holidays
 function getHolidays(countryCode){
  const url = calendarURL +'?api_key='+calendarAPI+'&country='+countryCode+'&year=2020&type=national';
  fetch(url)
@@ -62,12 +51,11 @@ function getHolidays(countryCode){
    }
    throw new Error(response.statusText);
  })
- .then(responseJson =>displayHolidays(responseJson,maxResults=9))
+ .then(responseJson =>displayHolidays(responseJson,maxResults=8))
  .catch(err => {
     $('#calendarInfo').text('Something went wrong: The calendar API does not work now. Try again later.');
  });
 }
-//display holidays
 function displayHolidays(responseJson,maxResults){
  $('#calendarInfo').removeClass('hidden');
  for (let i= 0; i<responseJson.response.holidays.length & i< maxResults; i++)
@@ -84,15 +72,8 @@ function displayHolidays(responseJson,maxResults){
      </div>`)
   };
 }
-/*get Youtube*/
 function getYouTube(countryFullCode) {
- /* const options = {
-      "Authorization": "Bearer" + youTubeAPI,
-      "Accept": 'application/json'
-      };*/
   const url = youtTubeURL + '?' + 'part=snippet&relevanceLanguage=en&order=relevance&q='+countryFullCode+'travel'+'&type=video'+'&key='+youTubeAPI;
-  console.log(url);
-
   fetch(url)
     .then(response => {
       if (response.ok && response.body!==null && response.body!==0) {
@@ -100,20 +81,17 @@ function getYouTube(countryFullCode) {
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => displayYouTube(responseJson, maxResults=12))
+    .then(responseJson => displayYouTube(responseJson, maxResults=8))
     .catch(err => {
       $('#videoInfo').text('Something went wrong: The YouTube API does not work now. Try again later.');
       $('#videoInfo').addClass('js-error-message');
       $('#videoInfo').addClass('bgColor');
     });
-    console.log('app ran');
 }
 
 function displayYouTube(responseJson,maxResults){
-  console.log(responseJson);
   for (let i = 0; i < responseJson.items.length & i < maxResults; i++){
     const videoURL = responseJson.items[i].id.videoId;
-    console.log(videoURL);
    $('#videoInfo').removeClass('hidden');
     $('#videoInfo').append(
       `
@@ -125,7 +103,6 @@ function displayYouTube(responseJson,maxResults){
     )};
     
 }
-
 function watchForm(){
   $('form').submit(event => {
    event.preventDefault();
