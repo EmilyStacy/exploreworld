@@ -3,7 +3,6 @@
   margin:0px;
   padding:0px;
 }
-/*transition background color*/
 .transitionColor{
  background-color: #57514cad;
 }
@@ -16,20 +15,17 @@
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    z-index: -2;       /* Safari 6.0 - 9.0 */
+    z-index: -2;      
 }
-
 .position{
 position:absolute;
 }
-/*image in countryInfo*/
 .imgSize{
   max-width:400px;
   width:30%;
   height:auto;
   margin:0 auto;
 }
-/*the h1*/
 .centerDiv{
   margin-top: 10vh;
   margin-left: 10vw;
@@ -37,12 +33,10 @@ position:absolute;
   line-height:1.5em;
   text-align: center;
 }
-
 .countryDiv{
   width:100%;
   height:auto;
 }
-/*other elements*/
 .kidDiv{
   width:95%;
   display:block;
@@ -51,7 +45,6 @@ position:absolute;
   letter-spacing:2px;
   padding: 1%;
 }
-/*form font*/
 .inputFont {
   border: 0;
   outline: 0;
@@ -64,46 +57,37 @@ position:absolute;
   font: inherit;
   text-align: center;
 }
-
 input:hover,input:focus, button:onfocus {
     background-color: transparent;
     cursor:pointer;
 }
-
-
 .white{
   color:white;
 }
-
 .azure{
   color:azure;
 }
-
 a {
   color:black;
 }
 a:hover{
   color:white;
 }
-
 a:visited{
   color:aqua;
 }
 .blueGreen{
   color:#a3d2d2;
 }
-
 .footer{
     position: fixed;
     bottom: 10px;
     right: 10px;
     color:white;
 }
-
 .hidden{
   display:none;
 }
-
 .button{
   font-size:1em;
   cursor: pointer;
@@ -115,7 +99,6 @@ a:visited{
   font-style:inherit;
   background-color:white;
 }
-/*country ul format*/
 .ulFormat{
     list-style: none;
     line-height: 1em;
@@ -125,7 +108,6 @@ a:visited{
     padding:20px;
     margin:0px;
 }
-/*fix color bug when restarting*/
 #countryInfo{
 background-color: #fdfbfbc7;
 }
@@ -143,13 +125,10 @@ text-align: center;
  margin-bottom:20px;
  margin-top:20px;
 }
-
 #center {
    margin-left: auto ;
    margin-right: auto ;
 }
-
-/*calendar ul format*/
 .ulFormat2{
     list-style: none;
     padding: 10px;
@@ -158,7 +137,6 @@ text-align: center;
     line-height:1.5em;
     text-align:center;
 }
-
 .liFormat2{
     padding: 1px;
     font-size: 1.1em; 
@@ -189,12 +167,10 @@ text-align: center;
 .textAlign{
   text-align:center;
 }
-/*texterror*/
 .js-error-message
 {
 margin-left:auto;
 margin-right:auto;
-/*bugargin-bottom:10vh;*/
 display:block;
 width:100%;
 font-style:inherit;
@@ -204,7 +180,6 @@ letter-spacing:1px;
 padding:20px;
 margin-top: 40vh;
 }
-/*youtube list*/
 .ulFormat3{
   list-style: none;
   padding: 0px;
@@ -217,12 +192,10 @@ margin-top: 40vh;
   background-color: #0a0c0ee7;
   padding:10px;
 }
-
 #footer2{
     color: white;
     font-size:10px;
 }
-
 img{
   padding: 5px;
   max-width: 300px;
@@ -231,9 +204,31 @@ img{
 .header{
   text-align:center;
 }
-
-@media screen and (max-width: 1285px) and (min-width:769px) {
-  
+@media screen and (min-width:769px) {
+  .margin2 {
+    margin-left: 15vw;
+  }
+  #calendarInfo{
+    width:50%;
+    padding:0;
+    margin:0;
+    display:inline-block; 
+    overflow:hidden;
+    flex:1;
+  }
+  #secondWrapper{
+    max-width:50%;
+    display:block; 
+    margin:0;
+    align-self:stretch;
+    overflow:hidden;
+    flex:1;
+  }
+  .containerWrapper {
+  display: flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+}
   h1{
   font-size:4.2em;
   padding:5%;
@@ -245,36 +240,30 @@ img{
     list-style: none;
     padding: 0px;
     line-height: 1em;
-    color: #000000e3;
-    background-color: #fdfbfbe8;
+    color: white;
+    background-color: #2b2b2b;
     width:100%;
     text-align:center;
 }
-
 .liFormat{
     line-height: 2em;
     font-size: 1.5em;
     margin: 10px;
     padding: 10px;
 }
-
 .h3{
   width:95%;
-  font-size:2.8em;
+  font-size:2.5em;
   line-height:1.1em;
   text-align:center;
   padding-top:50px;
 }
-
-
 .calendarHSize{
   font-size:2em;
 }
-
 .calendarPsize{
   font-size:1.8em;
 }
-
 .header{
  font-size:3em;
  padding: 5px;
@@ -283,8 +272,15 @@ img{
   padding-bottom:5px;
 }
 }
-
 @media screen and (max-width: 768px) and (min-width:412px) {
+#secondWrapper{
+    max-width:100%;
+    display:block; 
+    margin:0;
+    align-self:stretch;
+    overflow:hidden;
+    flex:1;
+  }
 .ulFormat2{
     list-style: none;
     padding: 10px;
@@ -318,12 +314,10 @@ img{
 .greyBackground{
   padding:30px 0 30px 0;
 }
-
 h1{
 font-size: 3em;
 padding:5%;
 }
-
 .h3{
   line-height:1.8em;
 }
@@ -333,11 +327,16 @@ padding:5%;
     margin: 10px;
     padding: 10px;
 }
-
 }
-
 @media screen and (max-width:411px)and (min-width:323px){
-
+#secondWrapper{
+    max-width:100%;
+    display:block; 
+    margin:0;
+    align-self:stretch;
+    overflow:hidden;
+    flex:1;
+  }
 .kidDiv{
   display:block;
   margin: 0px;
@@ -386,8 +385,15 @@ img{
   line-height:1.5em;
 }
 }
-
 @media screen and (max-width:322px){
+#secondWrapper{
+    max-width:100%;
+    display:block; 
+    margin:0;
+    align-self:stretch;
+    overflow:hidden;
+    flex:1;
+  }
 .centerDiv{
   margin-left: 5vw;
 }
@@ -440,7 +446,6 @@ img{
  font-size:0.9em;
  padding:10px;
 }
-
 .liFormat{
     padding: 1px;
     font-size: 0.8em;
