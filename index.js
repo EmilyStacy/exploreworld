@@ -1,7 +1,7 @@
 const restCountryURL = 'https://restcountries.eu/rest/v2/name/';
 const calendarURL = 'https://calendarific.com/api/v2/holidays';
 const calendarAPI = '	eb09f2389a52b877dbf8d29f1b4efee9c95ba222';
-const youTubeAPI = 'AIzaSyC3NuguJJDNUuhGc2cYiKhsr2ZHXxFb3ic'; 
+const youTubeAPI = REACT_APP_API_KEY;
 const youtTubeURL = 'https://www.googleapis.com/youtube/v3/search';
 function getCountry(country){
   const url = restCountryURL + country;
