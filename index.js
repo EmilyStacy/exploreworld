@@ -114,7 +114,7 @@ function watchForm(){
    $('#mainDiv').removeClass('centerDiv');
    const inputText = $('#inputText').val();
    $("#footer2").show();
-   getCountry(inputText);
+  //  getCountry(inputText);
    $('.bg').removeClass('position');
    $(".bg").css("background-image","url(https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIyNjY2fQ&auto=format&fit=crop&w=1652&q=80)").animate({opacity: 0.9}, 300);
   });
