@@ -4,7 +4,7 @@ const calendarAPI = '	eb09f2389a52b877dbf8d29f1b4efee9c95ba222';
 const youTubeAPI = REACT_APP_API_KEY;
 const youtTubeURL = 'https://www.googleapis.com/youtube/v3/search';
 function getCountry(country){
-  const url = restCountryURL + country;
+  const url = restCountryURL + {country};
   fetch(url)
   .then(response => {
     if(response.ok && response.body!==null && response.body!==0){
